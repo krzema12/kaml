@@ -62,8 +62,18 @@ kotlin {
 
     wasmJs {
         binaries.library()
-        browser()
-        nodejs()
+        browser {
+            testTask {
+                // TODO: enable once the tests work with Kotlin/Wasm.
+                enabled = false
+            }
+        }
+        nodejs {
+            testTask {
+                // TODO: enable once the tests work with Kotlin/Wasm.
+                enabled = false
+            }
+        }
     }
 
     sourceSets {

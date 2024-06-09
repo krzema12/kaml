@@ -60,6 +60,12 @@ kotlin {
         binaries.executable()
     }
 
+    wasmJs {
+        binaries.library()
+        browser()
+        nodejs()
+    }
+
     sourceSets {
         commonMain {
             dependencies {
